@@ -134,3 +134,4 @@ dmypy.json
 # Folders
 datasets/*
 plots/*
+results/*
