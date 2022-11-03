@@ -85,7 +85,7 @@ def cross_validation_users(c, model, array_x, array_y, model_name):
                               models.utilities.aggregate_users(array_x[test_index], filter=is_filter)
             y_train, y_test = models.utilities.aggregate_users_labels(array_y[train_index], filter=is_filter),\
                               models.utilities.aggregate_users_labels(array_y[test_index], filter=is_filter)
-        if data_source == 'EEG':
+        if data_source == 'EEG' and not (model_name=='C2D' or model_name=='D-C2D' or model_name=='D-C2D-L' or model_name=='C2D-L'):
             x_train, x_test = models.utilities.aggregate_questions(array_x[train_index], filter=is_filter),\
                               models.utilities.aggregate_questions(array_x[test_index], filter=is_filter)
             y_train, y_test = models.utilities.aggregate_questions_labels(array_y[train_index], filter=is_filter),\
